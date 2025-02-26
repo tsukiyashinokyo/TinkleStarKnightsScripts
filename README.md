@@ -1,4 +1,4 @@
-# TinkleStarKinghtsScript
+# TinkleStarKnightsScript
 ## 简介
     ~~疯狂星期四~~闪耀星骑士的脚本。包括主线和新月塔的开荒和一些日活
 
@@ -9,7 +9,7 @@
 ## 项目结构
     所有包下的globals存放了全局参数，global_set里是一些用于修改全局参数的方法
 
-### autoFuntion
+### autoFunction
     基本函数库，包括了一些最基本的脚本操作
 #### simple_function
     里面包含了最基本的自动化原子命令，例如模拟图像识别的点击，模拟滑动
