@@ -32,6 +32,9 @@
     "accountId": "7a6cbd40-71ac-424b-a0c5-8f18246752f6"
   }
 }]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -57,7 +60,7 @@
     "Python.simple_function.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -96,7 +99,7 @@
       <workItem from="1740390263727" duration="19517000" />
       <workItem from="1740489679464" duration="16096000" />
       <workItem from="1740542490743" duration="8158000" />
-      <workItem from="1740551477795" duration="16323000" />
+      <workItem from="1740551477795" duration="17725000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <option name="closed" value="true" />
@@ -123,7 +126,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>

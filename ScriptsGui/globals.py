@@ -1,0 +1,1 @@
+script_thread_flag = False #标识当前是否有脚本正在执行
