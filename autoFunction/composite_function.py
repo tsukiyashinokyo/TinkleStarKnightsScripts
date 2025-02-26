@@ -2,6 +2,7 @@ from . import globals
 from . import simple_function
 import time
 import sys
+from ScriptsGui import globals as gui_globals
 #返回主界面
 def return_home():
     while True:
@@ -54,6 +55,7 @@ def error_occurrence():
     success2,_,_,_ =simple_function.simple_picture_detection(globals.TARGET_PICTURE_FOLDER_PATH / 'error2.png',threshold=0.8)
     if success or success2:
         print("游戏连接断开了，脚本已自动退出")
+        gui_globals.script_thread_flag = False #表示脚本不在运行
         sys.exit()
 
 #检测并关闭公告等
@@ -102,6 +104,7 @@ def energy_recovery(if_recover = globals.default_if_recover #是否恢复体力
         #返回主界面
         return_home()
         print('体力已经耗尽，脚本自动退出')
+        gui_globals.script_thread_flag = False #表示脚本不在运行
         sys.exit()
 
 

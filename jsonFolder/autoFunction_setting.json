@@ -8,7 +8,7 @@
     "default_duration": "200",
     "loop_sleep_time": "0.5",
     "default_energy_recovery_order": "-1",
-    "default_if_recover": "false",
+    "default_if_recover": "True",
     "default_detect_sleep": "0.1",
     "default_error_times_limit": "100",
     "default_swipe_sleep": "1",

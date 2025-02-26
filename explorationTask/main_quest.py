@@ -69,5 +69,5 @@ def main_quest(quest_type):
     #选择关卡并战斗
     common_battle_loop()
 
-    gui_globals.script_thread_flag = False
+
 
