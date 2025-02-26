@@ -1,0 +1,16 @@
+{
+    "adb_path": "D:\\mumu\\MuMuPlayer-12.0\\shell\\adb.exe",
+    "adb_port": "16384",
+    "default_threshold": "0.9",
+    "default_multiple_matches_threshold": "0.8",
+    "default_click_sleep": "2",
+    "default_max_offset": "3",
+    "default_duration": "200",
+    "loop_sleep_time": "0.5",
+    "default_energy_recovery_order": "-1",
+    "default_if_recover": "false",
+    "default_detect_sleep": "0.1",
+    "default_error_times_limit": "100",
+    "default_swipe_sleep": "1",
+    "explanation": "\u81ea\u52a8\u51fd\u6570\u5e93\u8bbe\u7f6e"
+}
