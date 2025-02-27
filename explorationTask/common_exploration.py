@@ -22,12 +22,12 @@ def common_tower():
 
         # 战斗结束
         if globals.in_battle:  # 没在战斗时不检测战斗完成
-
             #战斗没完成确检测到了再战，说明输了
             success, _, _, _ = simple_function.simple_picture_detection(
                 globals.TARGET_PICTURE_FOLDER_PATH / 'battle_ready.png')
             if success:
                 gui_globals.script_thread_flag = False
+                globals.in_battle = False
                 print("打不过当前关卡！脚本已退出")
                 sys.exit()
 
@@ -65,6 +65,7 @@ def common_battle_loop():
             success,_,_,_ = simple_function.simple_picture_detection(globals.TARGET_PICTURE_FOLDER_PATH / 'finished.png')
             if success:
                 gui_globals.script_thread_flag = False
+                globals.in_battle = False
                 print("打不过当前关卡！脚本已退出")
                 sys.exit()
 
