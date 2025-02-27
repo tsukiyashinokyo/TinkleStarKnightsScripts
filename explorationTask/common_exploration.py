@@ -27,6 +27,7 @@ def common_tower():
             success, _, _, _ = simple_function.simple_picture_detection(
                 globals.TARGET_PICTURE_FOLDER_PATH / 'battle_ready.png')
             if success:
+                gui_globals.script_thread_flag = False
                 print("打不过当前关卡！脚本已退出")
                 sys.exit()
 
@@ -63,6 +64,7 @@ def common_battle_loop():
             simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'tap_tsuki.png')
             success,_,_,_ = simple_function.simple_picture_detection(globals.TARGET_PICTURE_FOLDER_PATH / 'finished.png')
             if success:
+                gui_globals.script_thread_flag = False
                 print("打不过当前关卡！脚本已退出")
                 sys.exit()
 
