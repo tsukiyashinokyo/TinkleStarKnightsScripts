@@ -136,7 +136,7 @@ def routine_main():
 
     #点击最高关卡(如果本页没有就换页)
     while True:
-        if simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'finished.png'):
+        if simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'finished.png',single_match=False,click_number=0):
             pass
         else:
             success,_,_,_ = simple_function.simple_picture_detection(globals.TARGET_PICTURE_FOLDER_PATH / 'unfinished.png')

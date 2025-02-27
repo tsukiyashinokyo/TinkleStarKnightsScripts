@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d681d1b-ee43-4daa-bf6a-a00aa0c63295" name="更改" comment="修复战斗失败时脚本状态错误" />
+    <list default="true" id="3d681d1b-ee43-4daa-bf6a-a00aa0c63295" name="更改" comment="修复前一个脚本战败，导致后一个脚本战败误判bug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,6 +133,8 @@
       <workItem from="1740580057671" duration="558000" />
       <workItem from="1740634290838" duration="1912000" />
       <workItem from="1740640036115" duration="218000" />
+      <workItem from="1740640730554" duration="620000" />
+      <workItem from="1740678497358" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <option name="closed" value="true" />
@@ -172,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740640182141</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修复前一个脚本战败，导致后一个脚本战败误判bug">
+      <option name="closed" value="true" />
+      <created>1740640876581</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740640876581</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +217,8 @@
     <MESSAGE value="第一次提交" />
     <MESSAGE value="Updata" />
     <MESSAGE value="修复战斗失败时脚本状态错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复战斗失败时脚本状态错误" />
+    <MESSAGE value="修复前一个脚本战败，导致后一个脚本战败误判bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复前一个脚本战败，导致后一个脚本战败误判bug" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/main_py$globals.coverage" NAME="globals 覆盖结果" MODIFIED="1740503786383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/autoFunction" />
