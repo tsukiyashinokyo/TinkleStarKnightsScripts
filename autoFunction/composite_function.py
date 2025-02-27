@@ -39,11 +39,11 @@ def skip(symbol_picture_path,max_clear=True):
         simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'yellow_skip.png')
         if max_clear:#是否点击max（即扫荡所有次数）
             simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'yellow_max.png')
-        if simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'certain.png'):
+        simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'certain.png')
+        if simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'tap_tsuki.png'):
             skip_over_flag = True
-        simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'tap_tsuki.png')
         success,_,_,_ = simple_function.simple_picture_detection(symbol_picture_path)
-        if success and skip_over_flag:
+        if success and (max_clear or skip_over_flag):
             break
         close_click()#关闭广告，检测连接错误
         time.sleep(globals.loop_sleep_time)
