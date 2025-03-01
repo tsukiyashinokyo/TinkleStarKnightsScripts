@@ -81,7 +81,9 @@ def simple_click(target_path,  #目标图像路径
                  cv_method=globals.default_cv2_method,#图像匹配方法
                  single_match = True, #是否单匹配（多匹配仍然是单点击）
                  click_number = -1, #点击第几个匹配到的图像,（-1为最后一个,0表示第一个，序号从0开始）,匹配到的图片顺序在界面从左到右,从上到下
-                 multiple_matches_threshold = globals.default_multiple_matches_threshold):#多匹配时的匹配精度
+                 multiple_matches_threshold = globals.default_multiple_matches_threshold,#多匹配时的匹配精度
+                 x_offset=0,#图片中心x轴偏移
+                 y_offset=0,):#图片中心y轴偏移
 
     if single_match:
         success,max_loc,width,height = simple_picture_detection(target_path=target_path, threshold=threshold, cv_method=cv_method)
@@ -90,16 +92,16 @@ def simple_click(target_path,  #目标图像路径
 
     if success:
         if single_match:#单匹配时
-            center_x = max_loc[0] + width // 2
-            center_y = max_loc[1] + height // 2 #这两条是设定点击点在图像中心
+            center_x = max_loc[0] + width // 2 +x_offset
+            center_y = max_loc[1] + height // 2 +y_offset#这两条是设定点击点在图像中心,和点击点距离中心的偏移
             print(f'点击图像{target_path}')
         else:#多匹配时
             if click_number > len(locs):
                 print(f'你所所选择的匹配图像点击序号越界!,当前只匹配到{len(locs)}个图像,序号为0-{len(locs)-1}')
                 return False
             else:
-                center_x = locs[click_number][0] + width // 2
-                center_y = locs[click_number][1] + height // 2
+                center_x = locs[click_number][0] + width // 2 +x_offset
+                center_y = locs[click_number][1] + height // 2 +y_offset
                 print(f'点击图像{target_path}的{"最后1" if click_number == -1 else "第" + str(click_number)}个匹配')
         return adb_click(center_x, center_y, sleeptime)
     else:

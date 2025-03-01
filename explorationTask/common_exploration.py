@@ -48,7 +48,7 @@ def common_battle_loop():
     while True:
 
         if not globals.in_battle:  # 不在战斗时才选择关卡
-            simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'unfinished.png')
+            simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'unfinished.png',x_offset=30)
             simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'quest_mission_battle.png')
 
         # 检测打架界面的暂停键，检测到说明进入了打架界面，休息两秒等战斗再检测
