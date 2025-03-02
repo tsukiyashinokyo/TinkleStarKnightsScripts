@@ -43,12 +43,12 @@ def common_tower():
         time.sleep(globals.loop_sleep_time)
 
 #消耗体力类型的战斗
-def common_battle_loop():
+def common_battle_loop(unfinished_name='unfinished.png'):
     gui_globals.script_thread_flag = True
     while True:
 
         if not globals.in_battle:  # 不在战斗时才选择关卡
-            simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'unfinished.png',x_offset=30)
+            simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / unfinished_name,x_offset=30)
             simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'quest_mission_battle.png')
 
         # 检测打架界面的暂停键，检测到说明进入了打架界面，休息两秒等战斗再检测
@@ -62,7 +62,7 @@ def common_battle_loop():
         if globals.in_battle:  # 没在战斗时不检测战斗完成
             simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'win.png')
             simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'tap_tsuki.png')
-            success,_,_,_ = simple_function.simple_picture_detection(globals.TARGET_PICTURE_FOLDER_PATH / 'finished.png')
+            success,_,_,_ = simple_function.simple_picture_detection(globals.TARGET_PICTURE_FOLDER_PATH / unfinished_name)
             if success:
                 gui_globals.script_thread_flag = False
                 globals.in_battle = False

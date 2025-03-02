@@ -45,13 +45,13 @@ def enter_the_mission_interface(quest_type,exploration_flag = True):
 def quest_search():
     while True:
         composite_function.error_occurrence()
-        success,_,_,_ = simple_function.simple_picture_detection(globals.TARGET_PICTURE_FOLDER_PATH / 'unfinished.png')
+        success,_,_,_ = simple_function.simple_picture_detection(globals.TARGET_PICTURE_FOLDER_PATH / 'main_unfinished.png')
         if success:
             return True
         else:
             time.sleep(globals.loop_sleep_time)
             #再查找一次
-            success, _, _, _ = simple_function.simple_picture_detection(globals.TARGET_PICTURE_FOLDER_PATH / 'unfinished.png')
+            success, _, _, _ = simple_function.simple_picture_detection(globals.TARGET_PICTURE_FOLDER_PATH / 'main_unfinished.png')
             if not success:
                 #还没找到就切换章节
                 simple_function.simple_click(globals.TARGET_PICTURE_FOLDER_PATH / 'left_arrow.png',threshold=0.8)
@@ -67,7 +67,7 @@ def main_quest(quest_type):
     #进入任务页面
     enter_the_mission_interface(quest_type)
     #选择关卡并战斗
-    common_battle_loop()
+    common_battle_loop('main_unfinished.png')
 
 
 
